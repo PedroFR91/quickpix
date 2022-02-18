@@ -3,7 +3,7 @@ import BackContainer from '../containers/BackContainer';
 
 function Base() {
   return (
-    <div>
+    <div className='base'>
       <BackContainer />
     </div>
   );

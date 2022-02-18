@@ -1,127 +1,32 @@
 import React from 'react';
-
+import data from '../constants/data';
+import MiniGrid from '../elements/MiniGrid';
+import PaletteGrid from '../elements/PaletteGrid';
+import buttonImg from '../assets/button_done.png';
+import Image from '../elements/Image';
 function Body() {
   return (
     <div className='bodycontainer'>
       <div className='centercontainer'>
         <div className='heading'>
           <div className='level'>Easy</div>
-          <div className='time'>2:00</div>
+          <div className='time'>0'00''</div>
         </div>
-        <div className='grid'>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
-          <div className='minigrid'></div>
+        <div className='gridcontainer'>
+          <div className='grid'>
+            {data.grid.map((actualGrid, index) => (
+              <MiniGrid color={actualGrid.minigrid} />
+            ))}
+          </div>
         </div>
         <div className='palette'>
-          <div className='minigrid white'></div>
-          <div className='minigrid black'></div>
-          <div className='minigrid brown'></div>
-          <div className='minigrid purple'></div>
-          <div className='minigrid blue'></div>
-          <div className='minigrid green'></div>
-          <div className='minigrid yellow'></div>
-          <div className='minigrid red'></div>
-          <div className='minigrid eraser'></div>
+          {data.palette.map((colorpalette, index) => (
+            <PaletteGrid color={colorpalette.color} />
+          ))}
         </div>
-        <div className='button'></div>
+        <div className='button'>
+          <Image nameImg={buttonImg} widthImg={'100%'} />
+        </div>
       </div>
     </div>
   );
