@@ -23,7 +23,7 @@ function Header({ nameImg, altImgAlt }) {
           <p className='todaystheme'>Today´s theme:</p>
         </div>
         <div>
-          <p className='theme'></p>
+          <p className='theme'>?????</p>
         </div>
       </div>
       <div className='help' onClick={showPopUp}>
