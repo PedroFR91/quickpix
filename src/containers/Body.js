@@ -4,15 +4,18 @@ import MiniGrid from '../elements/MiniGrid';
 import PaletteGrid from '../elements/PaletteGrid';
 import buttonImg from '../assets/button_done.png';
 import Image from '../elements/Image';
-import Levels from './Levels';
-
+import Levels from '../containers/Levels';
 function Body() {
   return (
     <div className='bodycontainer'>
       <div className='centercontainer'>
         <div className='heading'>
-          <div className='level'>Easy</div>
-          <div className='time'>0'00''</div>
+          <div>
+            <p id='level'></p>
+          </div>
+          <div>
+            <p id='time'></p>
+          </div>
         </div>
         <div className='gridcontainer'>
           <div className='grid'>
