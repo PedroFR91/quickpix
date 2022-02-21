@@ -4,18 +4,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  height: 100%;
+  overflow: hidden;
+}
 .base {
+  position: fixed;
   width: 100%;
   height: 100vh;
+  margin: 0 auto;
 }
 .backcontainer {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 /*HEADER*/
 .backgroundheader {
   width: 100%;
-  height: 25%;
+  height: 25vh;
   background: linear-gradient(rgb(0, 222, 244), rgb(0, 106, 204));
 }
 .quickpixtitle {
@@ -56,7 +62,7 @@
 /*BODY*/
 .bodycontainer {
   width: 100%;
-  height: 75%;
+  height: 75vh;
 }
 .centercontainer {
   width: 70%;
@@ -85,10 +91,57 @@
   justify-content: center;
 }
 .grid {
+  position: relative;
   width: 100%;
   max-width: 500px;
   display: flex;
   flex-wrap: wrap;
+}
+.levels {
+  position: absolute;
+  width: 100%;
+  max-width: 500px;
+  z-index: 5;
+}
+.listlevels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 24px;
+  color: #fff;
+}
+.listlevels .easylevel,
+.listlevels .mediumlevel,
+.listlevels .hardlevel {
+  display: flex;
+  width: 80%;
+  height: 20%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.easylevel {
+  background-color: #33984b;
+  border: 1px solid #4fe271;
+}
+.mediumlevel {
+  background-color: rgb(0, 152, 220);
+  border: 3px solid rgb(0, 205, 249);
+}
+.hardlevel {
+  background-color: rgb(234, 50, 60);
+  border: 3px solid rgb(246, 129, 135);
+}
+.selected {
+  border: 3px solid #fff;
 }
 .palette {
   display: flex;
@@ -107,6 +160,23 @@
   height: 10%;
   width: 70%;
   max-width: 400px;
+}
+/*POP UP*/
+.popup {
+  position: absolute;
+  top: 25%;
+  padding: 1rem;
+  z-index: 10;
+}
+.buttonclose {
+  position: absolute;
+  top: 5%;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+}
+.hide {
+  display: none;
 }
 
 /*Desktop Screen Breakpoint*/

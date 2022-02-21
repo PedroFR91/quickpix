@@ -1,5 +1,4 @@
 import './App.css';
-import BackContainer from './containers/BackContainer';
 import Base from './screens/Base';
 
 function App() {

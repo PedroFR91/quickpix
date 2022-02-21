@@ -4,6 +4,8 @@ import MiniGrid from '../elements/MiniGrid';
 import PaletteGrid from '../elements/PaletteGrid';
 import buttonImg from '../assets/button_done.png';
 import Image from '../elements/Image';
+import Levels from './Levels';
+
 function Body() {
   return (
     <div className='bodycontainer'>
@@ -15,13 +17,14 @@ function Body() {
         <div className='gridcontainer'>
           <div className='grid'>
             {data.grid.map((actualGrid, index) => (
-              <MiniGrid color={actualGrid.minigrid} />
+              <MiniGrid key={index} color={actualGrid.color} />
             ))}
+            <Levels />
           </div>
         </div>
         <div className='palette'>
           {data.palette.map((colorpalette, index) => (
-            <PaletteGrid color={colorpalette.color} />
+            <PaletteGrid key={index} color={colorpalette.color} />
           ))}
         </div>
         <div className='button'>

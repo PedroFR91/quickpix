@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MiniGrid({ content, color }) {
+function MiniGrid({ color }) {
   return <div className='minigrid' style={{ background: color }}></div>;
 }
 

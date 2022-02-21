@@ -64,7 +64,7 @@ const grid = [
   { minigrid: '#fff' },
   { minigrid: '#fff' },
   { minigrid: '#fff' },
-  { minigrid: '#fff' },
+  { minigrid: '#000' },
   { minigrid: '#fff' },
   { minigrid: '#fff' },
   { minigrid: '#fff' },
