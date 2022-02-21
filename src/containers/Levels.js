@@ -1,30 +1,49 @@
 import React from 'react';
 import Image from '../elements/Image';
 import backDifficultImg from '../assets/difficulty_dark_base_full.png';
+import CountDown from '../elements/CountDown';
 
 function setLevelEasy() {
   const setleveleasy = document.getElementById('setleveleasy').innerHTML;
-  document.getElementById('level').innerHTML = setleveleasy;
-  const settimeeasy = document.getElementById('settimeeasy').innerHTML;
-  document.getElementById('time').innerHTML = settimeeasy;
+  document.getElementById('leveleasy').innerHTML = setleveleasy;
+
+  const levels = document.getElementById('levels');
+  levels.classList.add('hide');
+
+  const leveleasy = document.getElementById('leveleasy');
+  leveleasy.classList.remove('hide');
+  const countdowneasy = document.getElementById('countdowneasy');
+  countdowneasy.classList.remove('hide');
 }
 
 function setLevelMedium() {
   const setlevelmedium = document.getElementById('setlevelmedium').innerHTML;
-  document.getElementById('level').innerHTML = setlevelmedium;
-  const settimemedium = document.getElementById('settimemedium').innerHTML;
-  document.getElementById('time').innerHTML = settimemedium;
+  document.getElementById('levelmedium').innerHTML = setlevelmedium;
+
+  const levels = document.getElementById('levels');
+  levels.classList.add('hide');
+
+  const levelmedium = document.getElementById('levelmedium');
+  levelmedium.classList.remove('hide');
+  const countdownmedium = document.getElementById('countdownmedium');
+  countdownmedium.classList.remove('hide');
 }
 
 function setLevelHard() {
   const setlevelhard = document.getElementById('setlevelhard').innerHTML;
-  document.getElementById('level').innerHTML = setlevelhard;
-  const settimehard = document.getElementById('settimehard').innerHTML;
-  document.getElementById('time').innerHTML = settimehard;
+  document.getElementById('levelhard').innerHTML = setlevelhard;
+
+  const levels = document.getElementById('levels');
+  levels.classList.add('hide');
+
+  const levelhard = document.getElementById('levelhard');
+  levelhard.classList.remove('hide');
+  const countdownhard = document.getElementById('countdownhard');
+  countdownhard.classList.remove('hide');
 }
 function Levels() {
   return (
-    <div className='levels'>
+    <div className='levels' id='levels'>
       <Image
         nameImg={backDifficultImg}
         widthImg={'100%'}
@@ -34,7 +53,9 @@ function Levels() {
         <p>Choose difficulty:</p>
         <div className='easylevel selected' onClick={setLevelEasy}>
           <div id='setleveleasy'>Easy</div>
-          <div id='settimeeasy'>3 min</div>
+          <div>
+            <span id='settimeeasy'>3</span> min
+          </div>
         </div>
         <div className='mediumlevel' onClick={setLevelMedium}>
           <div id='setlevelmedium'>Medium </div>

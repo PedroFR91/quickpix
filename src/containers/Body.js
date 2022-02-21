@@ -5,16 +5,30 @@ import PaletteGrid from '../elements/PaletteGrid';
 import buttonImg from '../assets/button_done.png';
 import Image from '../elements/Image';
 import Levels from '../containers/Levels';
+import CountDown from '../elements/CountDown';
+
 function Body() {
   return (
     <div className='bodycontainer'>
       <div className='centercontainer'>
         <div className='heading'>
-          <div>
-            <p id='level'></p>
+          <div id='leveleasy' className='hide'>
+            <p id='leveleasy'></p>
           </div>
-          <div>
-            <p id='time'></p>
+          <div id='countdowneasy' className='hide'>
+            <CountDown start={180} />
+          </div>
+          <div id='levelmedium' className='hide'>
+            <p id='levelmedium'></p>
+          </div>
+          <div id='countdownmedium' className='hide'>
+            <CountDown start={60} />
+          </div>
+          <div id='levelhard' className='hide'>
+            <p id='levelhard'></p>
+          </div>
+          <div id='countdownhard' className='hide'>
+            <CountDown start={30} />
           </div>
         </div>
         <div className='gridcontainer'>
