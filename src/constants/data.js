@@ -1,7 +1,5 @@
 const themes = [
-  {
-    theme: 'HEART',
-  },
+  { theme: 'HEART' },
   {
     theme: 'CAT',
   },
@@ -58,13 +56,13 @@ const themes = [
   },
 ];
 
-const grid = [
+let grid = [
   { minigrid: '#fff' },
   { minigrid: '#fff' },
   { minigrid: '#fff' },
   { minigrid: '#fff' },
   { minigrid: '#fff' },
-  { minigrid: '#000' },
+  { minigrid: '#fff' },
   { minigrid: '#fff' },
   { minigrid: '#fff' },
   { minigrid: '#fff' },
@@ -169,6 +167,6 @@ const palette = [
   { color: '#A98ED6' },
   { color: '#DE2E44' },
   { color: '#FACB58' },
-  { imageURl: '../assets/color_palette_erase.png' },
+  { color: '#fff' },
 ];
 export default { themes, grid, palette };

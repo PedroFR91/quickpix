@@ -14,7 +14,7 @@ function showPopUp() {
 
 function Header({ nameImg, altImgAlt }) {
   return (
-    <div className='backgroundheader'>
+    <div className='backgroundheader gradient' id='backgroundheader'>
       <div className='quickpixtitle'>
         <Image nameImg={quickpixTitle} widthImg={'100%'} />
       </div>
@@ -23,7 +23,7 @@ function Header({ nameImg, altImgAlt }) {
           <p className='todaystheme'>Today´s theme:</p>
         </div>
         <div>
-          <p className='theme'>?????</p>
+          <p></p>
         </div>
       </div>
       <div className='help' onClick={showPopUp}>

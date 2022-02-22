@@ -1,11 +1,8 @@
 import React from 'react';
-import data from '../constants/data';
-import Image from './Image';
 
-function PaletteGrid({ content, color, paletteColor }) {
+function PaletteGrid({ color, nameImg }) {
   function pickColor(e) {
     e.preventDefault();
-    paletteColor = color;
     console.log(color);
   }
   return (

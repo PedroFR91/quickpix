@@ -5,7 +5,7 @@ import {
   setLevelEasy,
   setLevelMedium,
   setLevelHard,
-  setStart,
+  startCd,
 } from '../elements/functions';
 function Levels() {
   return (
@@ -17,7 +17,13 @@ function Levels() {
       />
       <div className='listlevels'>
         <p>Choose difficulty:</p>
-        <div className='easylevel selected' onClick={setLevelEasy}>
+        <div
+          className='easylevel selected'
+          onClick={(e) => {
+            setLevelEasy();
+            startCd();
+          }}
+        >
           <div id='setleveleasy'>Easy</div>
           <div>
             <span id='settimeeasy'>3</span> min

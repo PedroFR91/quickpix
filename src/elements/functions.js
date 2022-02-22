@@ -53,6 +53,32 @@ function done() {
   const socialsection = document.getElementById('socialsection');
   socialsection.classList.remove('hide');
   socialsection.classList.add('flex');
+
+  const backgroundheader = document.getElementById('backgroundheader');
+  backgroundheader.classList.remove('gradient');
+  backgroundheader.classList.add('gradient2');
+}
+function changebackground() {
+  const backgroundheader = document.getElementById('backgroundheader');
+  backgroundheader.classList.remove('gradient');
+  backgroundheader.classList.add('gradient3');
+}
+function changebackgroundtwo() {
+  const backgroundheader = document.getElementById('backgroundheader');
+  backgroundheader.classList.remove('gradient3');
+  backgroundheader.classList.add('gradient');
+}
+function startCd(starCd) {
+  var starCd = true;
 }
 
-export { setLevelEasy, setLevelMedium, setLevelHard, setStart, done };
+export {
+  setLevelEasy,
+  setLevelMedium,
+  setLevelHard,
+  setStart,
+  done,
+  changebackground,
+  changebackgroundtwo,
+  startCd,
+};
